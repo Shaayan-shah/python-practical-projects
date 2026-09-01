@@ -1,107 +1,46 @@
-<div align="center">
+﻿# Python Practical Projects & Algorithms Suite
 
-# 🐍 Python Practice Projects
+A structured collection of standalone Python command-line applications, security utilities, algorithmic implementations, and performance benchmarks.
 
-A collection of small, self-contained Python applications — built to practice core programming concepts through real, working programs rather than isolated exercises.
+---
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white">
-  <img src="https://img.shields.io/badge/status-active-2E86AB?style=for-the-badge">
-</p>
+## 📂 Repository Organization
 
-</div>
-
-<br>
-
-## 📂 Projects in This Repo
-
-### 💰 Expense Tracker
-A personal finance tracker built in two versions:
-
-| Version | File | Description |
-|---|---|---|
-| **OOP (CLI)** | `expense_tracking_with_OOP.py` | Object-oriented command-line app for logging and reviewing expenses |
-| **Web App** | `expense_tracker_app_with_Streamli.py` | Interactive [Streamlit](https://streamlit.io) interface for the same functionality, run in-browser |
-
-Sample data: `Expense.csv`, `Expense_Dataset.csv`
-
-```bash
-# Run the CLI version
-python expense_tracking_with_OOP.py
-
-# Run the web app version
-streamlit run expense_tracker_app_with_Streamli.py
+```
+Projects/
+├── 01-cli-utilities/
+│   ├── atm-simulator/              # State-driven banking & transaction simulation
+│   ├── auth-system/                # User registration & credential authentication
+│   ├── calculator-pro/             # Arithmetic calculator with robust exception handling
+│   ├── password-tools/             # Password generation & strength evaluation suite
+│   ├── student-evaluator/          # Academic grading & eligibility verification
+│   └── todo-manager/               # Task management & productivity tracker
+│
+├── 02-algorithms-and-games/
+│   ├── number-guessing-game/       # Interactive binary-search hint game
+│   ├── palindrome-checker/         # String & numeric symmetry validation
+│   └── prime-number-finder/        # Mathematical primality algorithms
+│
+└── 03-benchmarks-and-profiling/
+    └── execution-speed-benchmark/  # Runtime performance & loop timing analyzer
 ```
 
 ---
 
-### 🧮 Simple Calculator
-`Simple Calculator.py` — command-line calculator supporting addition, subtraction, multiplication, and division.
+## 🛠️ Prerequisites & Setup
+
+All utilities in this repository use Python 3 standard libraries and require zero external dependencies.
 
 ```bash
-python "Simple Calculator.py"
-```
-
----
-
-### 🌐 Internet Speed Checker
-`Check_speed.py` — checks and reports current internet connection speed.
-
-```bash
-python Check_speed.py
-```
-
----
-
-### 📚 Student Record System
-Located in the `Projects/` folder — add, view, search, update, and delete student records.
-
-<br>
-
-## 🛠️ Tech Stack
-
-- **Language:** Python 3
-- **Libraries:** Streamlit (Expense Tracker web app)
-- **Tools:** Visual Studio Code, Git
-
-<br>
-
-## ⚡ Getting Started
-
-**1. Clone the repository**
-```bash
+# Clone the repository
 git clone https://github.com/Shaayan-shah/Projects.git
 cd Projects
+
+# Run any module directly, for example:
+python 01-cli-utilities/atm-simulator/atm_simulator.py
 ```
 
-**2. Install dependencies** *(only required for the Streamlit app)*
-```bash
-pip install streamlit
-```
+---
 
-**3. Run any script**
-```bash
-python <filename>.py
-```
-
-<br>
-
-## 🎯 Purpose
-
-Built as part of an ongoing Python learning journey — moving from syntax and theory to complete, working programs. This repository will continue to grow as new projects are added.
-
-<br>
-
-## 👤 Author
-
-<div align="center">
-
-**Shayan Shah**
-Computer Science Undergraduate · Machine Learning & Data Science
-
-<a href="https://linkedin.com/in/shaayanshah"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-<a href="mailto:shaayanshah10@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
-<a href="https://github.com/Shaayan-shah"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a>
-
-</div>
+## 📜 License
+MIT License • Created and maintained by [Shayan Shah](https://github.com/Shaayan-shah)
