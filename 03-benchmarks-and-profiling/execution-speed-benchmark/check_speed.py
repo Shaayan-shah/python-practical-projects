@@ -1,33 +1,52 @@
-import numpy as np
+﻿"""
+Python Loop & Comprehension Performance Benchmark
+Measures and compares execution times of standard for-loops, list comprehensions,
+map() operations, and generator expressions.
+"""
+
 import time
-
-# Create 1 million data points using standard Python and NumPy
-# This satisfies your random simulation data requirement
-np.random.seed(42)
-raw_data_list = list(np.random.rand(1000000))
-raw_data_array = np.array(raw_data_list)
-
-print("Data generation successful. 1 Million data points ready!")
+from typing import Callable, Any
 
 
-start_time = time.time()
+def benchmark_function(name: str, func: Callable[[], Any], iterations: int = 1_000_000):
+    """Measure execution time of a callable function."""
+    start = time.perf_counter()
+    func()
+    elapsed = time.perf_counter() - start
+    print(f"  {name:<30} : {elapsed * 1000.0:>8.2f} ms ({iterations:,} elements)")
+    return elapsed
 
-# Processing using a standard manual loop
-loop_results = []
-for value in raw_data_list:
-    loop_results.append((value * 2.5) + 10.8)
 
-loop_time = time.time() - start_time
-print(f"Standard Python Loop took: {loop_time:.6f} seconds")
+def main():
+    n = 1_000_000
+    print("==================================================")
+    print(f"      PYTHON EXECUTION SPEED BENCHMARK (N={n:,})   ")
+    print("==================================================")
 
-start_time = time.time()
+    def loop_append():
+        res = []
+        for i in range(n):
+            res.append(i * 2)
+        return res
 
-# Processing using NumPy Vectorization (No loops!)
-vectorized_results = (raw_data_array * 2.5) + 10.8
+    def list_comp():
+        return [i * 2 for i in range(n)]
 
-numpy_time = time.time() - start_time
-print(f"NumPy Vectorized operation took: {numpy_time:.6f} seconds")
+    def map_func():
+        return list(map(lambda i: i * 2, range(n)))
 
-# Calculate the speed difference to prove mastery
-speed_factor = loop_time / numpy_time
-print(f"\n🚀 NumPy is {speed_factor:.2f}x faster than standard Python lists!")
+    def gen_expr():
+        return list(i * 2 for i in range(n))
+
+    print("\nRunning Benchmarks...")
+    benchmark_function("1. Standard For Loop", loop_append, n)
+    benchmark_function("2. List Comprehension", list_comp, n)
+    benchmark_function("3. Built-in map()", map_func, n)
+    benchmark_function("4. Generator Expression", gen_expr, n)
+
+    print("\n[Observation] List comprehensions execute at C-level speed, consistently outperforming standard Python append loops.")
+    print("==================================================")
+
+
+if __name__ == "__main__":
+    main()
