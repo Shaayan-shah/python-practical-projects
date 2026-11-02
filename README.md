@@ -1,46 +1,42 @@
-﻿# Python Practical Projects & Algorithms Suite
+# Python Practical Projects & Algorithms Suite
 
-A structured collection of standalone Python command-line applications, security utilities, algorithmic implementations, and performance benchmarks.
+A structured collection of standalone Python command-line applications, algorithmic implementations, games, and performance benchmarks.
 
----
+## Repository organization
 
-## 📂 Repository Organization
-
-```
-Projects/
+```text
+python-practical-projects/
 ├── 01-cli-utilities/
-│   ├── atm-simulator/              # State-driven banking & transaction simulation
-│   ├── auth-system/                # User registration & credential authentication
-│   ├── calculator-pro/             # Arithmetic calculator with robust exception handling
-│   ├── password-tools/             # Password generation & strength evaluation suite
-│   ├── student-evaluator/          # Academic grading & eligibility verification
-│   └── todo-manager/               # Task management & productivity tracker
-│
+│   ├── atm-simulator/              # State-driven banking and transaction simulation
+│   ├── auth-system/                # User registration and credential authentication
+│   ├── calculator-pro/             # Calculator with input and exception handling
+│   ├── password-tools/             # Password generation and strength evaluation
+│   ├── student-evaluator/          # Academic grading and eligibility checks
+│   └── todo-manager/               # Command-line task management
 ├── 02-algorithms-and-games/
-│   ├── number-guessing-game/       # Interactive binary-search hint game
-│   ├── palindrome-checker/         # String & numeric symmetry validation
-│   └── prime-number-finder/        # Mathematical primality algorithms
-│
+│   ├── number-guessing-game/       # Number guessing game with binary-search hints
+│   ├── palindrome-checker/         # String and numeric palindrome checks
+│   └── prime-number-finder/        # Primality algorithms
 └── 03-benchmarks-and-profiling/
-    └── execution-speed-benchmark/  # Runtime performance & loop timing analyzer
+    └── execution-speed-benchmark/  # Runtime and loop timing analyzer
 ```
 
----
+## Requirements
 
-## 🛠️ Prerequisites & Setup
+The included utilities use the Python 3 standard library and require no third-party packages.
 
-All utilities in this repository use Python 3 standard libraries and require zero external dependencies.
+## Getting started
 
 ```bash
-# Clone the repository
-git clone https://github.com/Shaayan-shah/Projects.git
-cd Projects
-
-# Run any module directly, for example:
+git clone https://github.com/Shaayan-shah/python-practical-projects.git
+cd python-practical-projects
 python 01-cli-utilities/atm-simulator/atm_simulator.py
 ```
 
----
+Run any utility directly with Python. Each project is organized in its own directory.
 
-## 📜 License
-MIT License • Created and maintained by [Shayan Shah](https://github.com/Shaayan-shah)
+## License
+
+MIT License. See [LICENSE](LICENSE).
+
+Created and maintained by [Shayan Shah](https://github.com/Shaayan-shah).
